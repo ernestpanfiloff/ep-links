@@ -71,8 +71,16 @@ if(isset($_POST['submit'])) {
           </div>
 
           <div class="container text-left">
-      <div class="row justify-content-evenly">
-
+      <div class="table">
+      <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Definition</th>
+      <th scope="col">Author</th>
+    </tr>
+    <tbody>
+  </thead>
         <?php
         $sql = "SELECT * FROM `definition`";
         $result = mysqli_query($con, $sql);
@@ -85,20 +93,19 @@ if(isset($_POST['submit'])) {
             $date = $card['date'];
             $author = $card['author'];
 
-            echo ' <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-body">
-                  <h2 class="card-title">🐼 '.$title.'</h2>
-                  <p class="card-text">'.$definition.'</p>
-                  <p class="card-text"><small class="text-muted">Posted by <strong>'.$author.'</strong> on '.$date.'</small></p>
-              </div>
-            </div>
-          </div> ';
+            echo ' <tr>
+                  <th scope="row">'.$id.'</th>
+                  <td>🐼 '.$title.'</ted>
+                  <td>'.$definition.'</td>
+                  <td>'.$author.'</td>
+                  <td>'.$date.'</td>
+                  </tr>';
 
           }
         }
         ?>
-      
+        </tbody>
+
 
       </div>
     </div>
