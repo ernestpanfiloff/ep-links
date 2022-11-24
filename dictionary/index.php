@@ -36,8 +36,6 @@ include 'connect.php';
     
     <div class="container text-left">
       <div class="row">
-
-      <div class="col">
         <?php
         $sql = "SELECT * FROM `definition`";
         $result = mysqli_query($con, $sql);
@@ -48,17 +46,33 @@ include 'connect.php';
             $title = $card['title'];
             $definition = $card['definition'];
             $date = $card['date'];
-            echo '<div class="card">
-                <div class="card-body">
-                  <h2 class="card-title">'.$title.'</h2>
-                  <p class="card-text">'.$definition.'</p>
-                  <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> on '.$date.'</small></p>
-              </div>';
+            
+            foreach($items as $item) {
+              echo "<div class='col-lg-2'>";
+                  echo "<div class='card'>";
+                    echo '<div class="card-body">
+                    <h2 class="card-title">'.$title.'</h2>
+                    <p class="card-text">'.$definition.'</p>
+                    <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> on '.$date.'</small></p>
+                    </div>';
+                  echo '</div>';
+              echo '</div>';
+              $i++;
+              if ($i % 2 == 0) {echo '</div><div class="row">';}
+            }
+
+          //   echo ' <div class="col">
+          //   <div class="card">
+          //       <div class="card-body">
+          //         <h2 class="card-title">'.$title.'</h2>
+          //         <p class="card-text">'.$definition.'</p>
+          //         <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> on '.$date.'</small></p>
+          //     </div>
+          //   </div>
+          // </div> ';
           }
         }
         ?>
-        </div> 
-
       </div>
     </div>
 
