@@ -4,7 +4,7 @@ include 'connect.php';
 if(isset($_POST['submit'])) {
   $title = $_POST['title'];
   $definition = $_POST['definition'];
-  $date = date("Y-m-d");
+  $date = now();
 
   $sql = "INSERT INTO definition (title, definition) VALUES ('$title', '$definition', '$date')";
 
