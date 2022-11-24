@@ -1,16 +1,18 @@
 <?php
 include 'connect.php';
+
 if(isset($_POST['submit'])) {
   $title = $_POST['title'];
   $definition = $_POST['definition'];
 
-  $sql = "INSERT INTO `definition` (title, definition) VALUES ('$title', '$definition')";
+  $sql = "INSERT INTO definition (title, definition) VALUES ('$title', '$definition')";
+
   $result = mysqli_query($con, $sql);
 
-  if($result) {
-    echo "Successfully added";
+  if ($con->query($sql) === TRUE) {
+    echo "New record created successfully";
   } else {
-    die("Connection failed: " . mysqli_error($con));
+    echo "Error: " . $sql . "<br>" . $conn->error;
   }
 
 }
