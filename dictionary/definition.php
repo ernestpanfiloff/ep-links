@@ -4,8 +4,9 @@ include 'connect.php';
 if(isset($_POST['submit'])) {
   $title = $_POST['title'];
   $definition = $_POST['definition'];
+  $date = date("Y-m-d");
 
-  $sql = "INSERT INTO definition (title, definition) VALUES ('$title', '$definition')";
+  $sql = "INSERT INTO definition (title, definition) VALUES ('$title', '$definition', '$date')";
 
   $result = mysqli_query($con, $sql);
 }
