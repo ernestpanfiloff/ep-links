@@ -38,11 +38,7 @@ if(isset($_POST['submit'])) {
     </nav>
     <div class="container-sm mt-5">
 
-    <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item text-light"><a href="index.php"><- Go back to the Home Page</a></li>
-  </ol>
-</nav>
+    <button type="button" class="btn btn-link text-light mb-5"><- Go back to the Home Page</button>
 
         <div class="p-5 mb-5 bg-secondary card">
             <div class="container-fluid py-5">
