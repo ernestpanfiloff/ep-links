@@ -32,7 +32,7 @@ if(isset($_POST['submit'])) {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav text-light me-auto mb-2 mb-lg-0">
             </ul>
-              <button class="btn btn-outline-light">For Panda only</button>
+            <a href="definition.php" class="btn btn-outline-light" role="button" aria-pressed="true">Add a definition</a>
           </div>
         </div>
     </nav>
@@ -41,7 +41,7 @@ if(isset($_POST['submit'])) {
         <div class="p-5 mb-5 bg-secondary card">
             <div class="container-fluid py-5">
               <h1 class="display-5 fw-bold text-light">Add a new definition</h1>
-              <p class="col fs-4 text-light">Just enter the information, and click the "Add" button. Easy.  </p>
+              <p class="col fs-4 text-light">Just enter the title and the definition, then click the "Add" button. Easy as that. 👌</p>
 
               <form method="post">
 
