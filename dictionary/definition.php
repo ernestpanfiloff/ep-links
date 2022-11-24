@@ -71,7 +71,7 @@ if(isset($_POST['submit'])) {
           </div>
 
           <div class="container text-left">
-      <div class="table">
+      <table class="table">
       <thead>
     <tr>
       <th scope="col">#</th>
@@ -105,7 +105,6 @@ if(isset($_POST['submit'])) {
         }
         ?>
         </tbody>
-      </div>
 
       </div>
     </div>
