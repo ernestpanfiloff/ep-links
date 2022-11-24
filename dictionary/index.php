@@ -47,13 +47,14 @@ include 'connect.php';
             $title = $card['title'];
             $definition = $card['definition'];
             $date = $card['date'];
+            $author = $card['author'];
 
             echo ' <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-body">
                   <h2 class="card-title">'.$title.'</h2>
                   <p class="card-text">'.$definition.'</p>
-                  <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> '.$date.'</small></p>
+                  <p class="card-text"><small class="text-muted">Posted by <strong>'.$author.'</strong> on '.$date.'</small></p>
               </div>
             </div>
           </div> ';
