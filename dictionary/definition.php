@@ -1,3 +1,23 @@
+<?php
+include 'connect.php';
+if(isset($_POST['submit'])) {
+  $title = $_POST['title'];
+  $definition = $_POST['definition'];
+
+  $sql = "INSERT INTO `definition` (title, definition) VALUES ('$title', '$definition')";
+  $result = mysqli_query($con, $sql);
+
+  if($result) {
+    echo "Successfully added";
+  } else {
+    die("Connection failed: " . mysqli_error($con));
+  }
+
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,7 +66,7 @@
 
                 <div class="form-group row">
                   <div class="col-sm-10 ">
-                    <button type="submit" class="btn btn-lg fw-bold btn-success">👍 Add</button>
+                    <button type="submit" name="submit" class="btn btn-lg fw-bold btn-success">👍 Add</button>
                   </div>
                 </div>
 
