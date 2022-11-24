@@ -47,21 +47,29 @@ include 'connect.php';
     ?>
     
     <div class="container text-left">
-      <div class="row">
-        <?php
-            echo ' <div class="col">
-            <div class="card">
-                <div class="card-body">
+
+    <?php
+
+$numberOfColumns = 3;
+$bootstrapColWidth = 12 / $numberOfColumns ;
+
+$arrayChunks = array_chunk($items, $numberOfColumns);
+foreach($arrayChunks as $items) {
+    echo '<div class="row">';
+    foreach($items as $item) {
+        echo '<div class="col-md-'.$bootstrapColWidth.'">';
+        <div class="card">
+          <div class="card-body">
                   <h2 class="card-title">'.$title.'</h2>
                   <p class="card-text">'.$definition.'</p>
                   <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> on '.$date.'</small></p>
-              </div>
-            </div>
-          </div> ';
-          }
-        }
-        ?>
-      </div>
+          </div>
+        </div>
+        echo '</div>';
+    }
+    echo '</div>';
+}  
+?>
     </div>
 
 
