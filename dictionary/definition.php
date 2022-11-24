@@ -71,13 +71,14 @@ if(isset($_POST['submit'])) {
           </div>
 
           <div class="container text-left">
-      <table class="table">
+      <table class="table table-dark table-striped">
       <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Title</th>
       <th scope="col">Definition</th>
       <th scope="col">Author</th>
+      <th scope="col">Date posted</th>
     </tr>
     <tbody>
   </thead>
