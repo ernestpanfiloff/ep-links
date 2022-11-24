@@ -102,8 +102,8 @@ if(isset($_POST['submit'])) {
                   <td>'.$author.'</td>
                   <td>'.$date.'</td>
                   <td><div class="btn-group" role="group">
-                  <button type="button" class="btn btn-sm btn-danger">Delete</button>
-                  <button type="button" class="btn btn-sm btn-primary">Update</button>
+                  <button type="button" class="btn btn-danger" style="--bs-btn-font-size: .75rem;">Delete</button>
+                  <button type="button" class="btn btn-primary" style="--bs-btn-font-size: .75rem;">Update</button>
                 </div></td>
                   </tr>';
 
