@@ -4,8 +4,9 @@ include 'connect.php';
 if(isset($_POST['submit'])) {
   $title = $_POST['title'];
   $definition = $_POST['definition'];
+  $author = $_POST['author'];
 
-  $sql = "INSERT INTO definition (title, definition, date) VALUES ('$title', '$definition', now())";
+  $sql = "INSERT INTO definition (title, definition, date, author) VALUES ('$title', '$definition', now(), '$author')";
 
   $result = mysqli_query($con, $sql);
 }
@@ -56,6 +57,17 @@ if(isset($_POST['submit'])) {
                   <label class="col-sm-2 col-form-label text-light">Definition</label>
                   <div class="col-sm-10 mb-3">
                     <textarea class="form-control" rows="3" placeholder="Enter the definition..." name="definition"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label text-light">Author</label>
+                  <div class="col-sm-10 mb-3">
+                    <textarea class="form-control" rows="3" placeholder="Enter the definition..." name="definition"></textarea>
+                    <select class="form-select">
+  <option value="1">Panda</option>
+  <option value="2">Ernest</option>
+</select>
                   </div>
                 </div>
 
