@@ -70,7 +70,38 @@ if(isset($_POST['submit'])) {
             </div>
           </div>
 
+          <div class="container text-left">
+      <div class="row justify-content-evenly">
 
+        <?php
+        $sql = "SELECT * FROM `definition`";
+        $result = mysqli_query($con, $sql);
+
+        if($result) {
+          while($card = mysqli_fetch_assoc($result)) {
+            $id = $card['id'];
+            $title = $card['title'];
+            $definition = $card['definition'];
+            $date = $card['date'];
+            $author = $card['author'];
+
+            echo ' <div class="col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">🐼 '.$title.'</h2>
+                  <p class="card-text">'.$definition.'</p>
+                  <p class="card-text"><small class="text-muted">Posted by <strong>'.$author.'</strong> on '.$date.'</small></p>
+              </div>
+            </div>
+          </div> ';
+
+          }
+        }
+        ?>
+      
+
+      </div>
+    </div>
           
     </div>    
 
