@@ -80,7 +80,7 @@ var pass_entered;
 var password="1228";
 
 while (pass_entered!=password) {
-    pass_entered=prompt('Prove that you\'re Panda. Enter password:','');
+    pass_entered=prompt('Only Panda allowed here! Prove that you\'re Panda. Enter password:','');
 }
 
 self.close();
