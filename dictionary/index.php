@@ -42,20 +42,24 @@ include 'connect.php';
         $result = mysqli_query($con, $sql);
 
         if($result) {
-          $card = mysqli_fetch_assoc($result);
-          echo $card['title'];
+          while($card = mysqli_fetch_assoc($result)) {
+            $id = $card['id'];
+            $title = $card['title'];
+            $definition = $card['definition'];
+            $date = $card['date'];
+            echo ' <div class="col">
+            <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">'.$title.'</h2>
+                  <p class="card-text">'.$definition.'</p>
+                  <p class="card-text"><small class="text-muted">'.$date.'</small></p>
+              </div>
+            </div>
+          </div> ';
+          }
         }
         ?>
-        
-        <!-- <div class="col">
-          <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">ghexna</h2>
-                <p class="card-text">ghexna means a panda who loves his bestie.</p>
-                <p class="card-text"><small class="text-muted">By <strong>Panda</strong> on November 22, 2022</small></p>
-            </div>
-          </div>
-        </div> -->
+      
 
       </div>
     </div>
