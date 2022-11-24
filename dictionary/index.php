@@ -36,9 +36,6 @@ include 'connect.php';
     
     <div class="container text-left">
       <div class="row">
-      <?php
-        foreach ($rows as $row){
-      ?> 
         <?php
         $sql = "SELECT * FROM `definition`";
         $result = mysqli_query($con, $sql);
@@ -49,9 +46,8 @@ include 'connect.php';
             $title = $card['title'];
             $definition = $card['definition'];
             $date = $card['date'];
-            
 
-            echo ' <div class="col-lg-4 col-sm-4 col-6">
+            echo ' <div class="col">
             <div class="card">
                 <div class="card-body">
                   <h2 class="card-title">'.$title.'</h2>
