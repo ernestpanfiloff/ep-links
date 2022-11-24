@@ -47,6 +47,7 @@ include 'connect.php';
             $title = $card['title'];
             $definition = $card['definition'];
             $date = $card['date'];
+
             echo ' <div class="g-col-6 g-col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -56,6 +57,7 @@ include 'connect.php';
               </div>
             </div>
           </div> ';
+          
           }
         }
         ?>
