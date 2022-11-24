@@ -17,7 +17,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav text-light me-auto mb-2 mb-lg-0">
             </ul>
-              <button class="btn btn-outline-light">For Panda only</button>
+              <a href="definition.php" class="btn btn-outline-light" role="button" aria-pressed="true">Add a definition</a>
           </div>
         </div>
     </nav>
