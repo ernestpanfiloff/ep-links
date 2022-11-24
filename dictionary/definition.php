@@ -38,7 +38,7 @@ if(isset($_POST['submit'])) {
     </nav>
     <div class="container-sm mt-5">
 
-    <button type="button" class="btn btn-dark text-light mb-5">⬅ Go back to the Home Page</button>
+    <button type="button" class="btn btn-dark text-light mb-5">👈 Go back to the Home Page</button>
 
         <div class="p-5 mb-5 bg-secondary card">
             <div class="container-fluid py-5">
