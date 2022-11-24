@@ -49,7 +49,7 @@ include 'connect.php';
     <div class="container text-left">
       <div class="row">
         <?php
-          echo ' <div class="col">
+          echo ' <div class="col-sm">
             <div class="card">
                 <div class="card-body">
                   <h2 class="card-title">'.$title.'</h2>
