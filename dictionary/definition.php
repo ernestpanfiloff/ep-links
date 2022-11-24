@@ -79,6 +79,7 @@ if(isset($_POST['submit'])) {
       <th scope="col">Definition</th>
       <th scope="col">Author</th>
       <th scope="col">Date posted</th>
+      <th scope="col">Operations</th>
     </tr>
     <tbody>
   </thead>
@@ -100,6 +101,10 @@ if(isset($_POST['submit'])) {
                   <td>'.$definition.'</td>
                   <td>'.$author.'</td>
                   <td>'.$date.'</td>
+                  <td><div class="btn-group" role="group">
+                  <button type="button" class="btn btn-danger">Delete</button>
+                  <button type="button" class="btn btn-primary">Update</button>
+                </div></td>
                   </tr>';
 
           }
