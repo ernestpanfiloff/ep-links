@@ -38,7 +38,7 @@ include 'connect.php';
       <div class="row">
 
         <?php
-        $sql = "SELECT * FROM definition";
+        $sql = "SELECT * FROM `definition`";
         $result = mysqli_query($con, $sql);
 
         if($result) {
