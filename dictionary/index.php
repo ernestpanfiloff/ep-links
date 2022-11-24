@@ -1,3 +1,7 @@
+<?php
+include 'connect.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,10 +34,19 @@
         </div>
     </div>
     
-    <div class="container text-center">
+    <div class="container text-left">
       <div class="row">
 
-        <div class="col">
+        <?php
+        $sql = "SELECT * FROM definition";
+        $result = mysqli_query($con, $sql);
+
+        if($result) {
+          $card = mysqli_fetch_assoc($result);
+        }
+        ?>
+        
+        <!-- <div class="col">
           <div class="card">
               <div class="card-body">
                 <h2 class="card-title">ghexna</h2>
@@ -41,7 +54,7 @@
                 <p class="card-text"><small class="text-muted">By <strong>Panda</strong> on November 22, 2022</small></p>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
