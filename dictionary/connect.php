@@ -1,11 +1,17 @@
 <?php
 
-$con = new mysqli("localhost", "tpckdrwwjd", "W8RPDVrnrm", "tpckdrwwjd");
+// Database details
+$servername = "localhost";
+$username = "tpckdrwwjd";
+$password = "W8RPDVrnrm";
 
-if (!$con) {
-    echo "Connected";
-} else {
-    die("Connection failed: " . mysqli_error($con));
-}
+// Create connection
+$con = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  echo "Connected successfully";
 
 ?>
