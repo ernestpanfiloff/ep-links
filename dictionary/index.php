@@ -43,6 +43,7 @@ include 'connect.php';
 
         if($result) {
           $card = mysqli_fetch_assoc($result);
+          echo $card['title'];
         }
         ?>
         
