@@ -33,20 +33,22 @@ include 'connect.php';
             </div>
         </div>
     </div>
+
+    <?php
+            $sql = "SELECT * FROM `definition`";
+            $result = mysqli_query($con, $sql);
+    
+            if($result) {
+              while($card = mysqli_fetch_assoc($result)) {
+                $id = $card['id'];
+                $title = $card['title'];
+                $definition = $card['definition'];
+                $date = $card['date'];
+    ?>
     
     <div class="container text-left">
       <div class="row">
         <?php
-        $sql = "SELECT * FROM `definition`";
-        $result = mysqli_query($con, $sql);
-
-        if($result) {
-          while($card = mysqli_fetch_assoc($result)) {
-            $id = $card['id'];
-            $title = $card['title'];
-            $definition = $card['definition'];
-            $date = $card['date'];
-
             echo ' <div class="col">
             <div class="card">
                 <div class="card-body">
