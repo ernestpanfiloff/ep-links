@@ -64,8 +64,8 @@ if(isset($_POST['submit'])) {
                   <label class="col-sm-2 col-form-label text-light">Author</label>
                   <div class="col-sm-10 mb-3">
                     <select class="form-select">
-  <option value="1">Panda</option>
-  <option value="2">Ernest</option>
+  <option value="Panda">Panda</option>
+  <option value="Ernest">Ernest</option>
 </select>
                   </div>
                 </div>
