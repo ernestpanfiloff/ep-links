@@ -52,7 +52,7 @@ include 'connect.php';
                 <div class="card-body">
                   <h2 class="card-title">'.$title.'</h2>
                   <p class="card-text">'.$definition.'</p>
-                  <p class="card-text"><small class="text-muted">'.$date.'</small></p>
+                  <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> on '.$date.'</small></p>
               </div>
             </div>
           </div> ';
