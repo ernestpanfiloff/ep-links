@@ -74,16 +74,6 @@ if(isset($_POST['submit'])) {
           
     </div>    
 
-    <script language="JavaScript">
-
-var pass_entered;
-var password="1228";
-
-while (pass_entered!=password) {
-    pass_entered=prompt('Only Panda allowed here! Prove that you\'re Panda. Enter password:','');
-}
-
-self.close();
 
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
