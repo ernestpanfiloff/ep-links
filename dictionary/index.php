@@ -35,7 +35,7 @@ include 'connect.php';
     </div>
     
     <div class="container text-left">
-      <div class="row">
+      <div class="grid">
 
         <?php
         $sql = "SELECT * FROM `definition`";
@@ -47,8 +47,8 @@ include 'connect.php';
             $title = $card['title'];
             $definition = $card['definition'];
             $date = $card['date'];
-            echo ' <div class="col col-sm-1 col-md-3 col-lg-4">
-            <div class="card-sm">
+            echo ' <div class="g-col-6 g-col-md-4">
+            <div class="card">
                 <div class="card-body">
                   <h2 class="card-title">'.$title.'</h2>
                   <p class="card-text">'.$definition.'</p>
