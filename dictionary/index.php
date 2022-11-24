@@ -47,7 +47,6 @@ include 'connect.php';
             $title = $card['title'];
             $definition = $card['definition'];
             $date = $card['date'];
-            $author = $card['author'];
 
             echo ' <div class="col-md-6 mb-3">
             <div class="card">
