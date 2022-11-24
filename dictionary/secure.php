@@ -1,0 +1,20 @@
+<?php
+$pass = $_POST['pass'];
+
+if($pass == "1228")
+{
+        include("definition.php");
+}
+else
+{
+    if(isset($_POST))
+    {?>
+
+            <form method="POST" action="secure.php">
+            User <input type="text" name="user"></input><br/>
+            Pass <input type="password" name="pass"></input><br/>
+            <input type="submit" name="submit" value="Go"></input>
+            </form>
+    <?}
+}
+?>
