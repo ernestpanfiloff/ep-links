@@ -41,7 +41,7 @@ if(isset($_POST['submit'])) {
         <div class="p-5 mb-5 bg-secondary card">
             <div class="container-fluid py-5">
               <h1 class="display-5 fw-bold text-light">Add a new definition</h1>
-              <p class="col fs-4 text-light">Just enter the title and the definition, then click the "Add" button. Easy as that. 👌</p>
+              <p class="col fs-4 text-light">Just enter the title and the definition, then click the "Add" button. Simple. 👌</p>
 
               <form method="post">
 
