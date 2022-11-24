@@ -6,7 +6,7 @@ if(isset($_POST['submit'])) {
   $definition = $_POST['definition'];
   $author = $_POST['author'];
 
-  $sql = "INSERT INTO definition (title, definition, date, author) VALUES ('$title', '$definition', now()), '.$author.'";
+  $sql = "INSERT INTO definition (title, definition, date) VALUES ('$title', '$definition', now())";
 
   $result = mysqli_query($con, $sql);
 }
