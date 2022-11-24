@@ -105,7 +105,7 @@ if(isset($_POST['submit'])) {
         }
         ?>
         </tbody>
-
+      </div>
 
       </div>
     </div>
