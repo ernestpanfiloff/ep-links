@@ -33,34 +33,34 @@ include 'connect.php';
             </div>
         </div>
     </div>
-
-    <?php
-            $sql = "SELECT * FROM `definition`";
-            $result = mysqli_query($con, $sql);
-    
-            if($result) {
-              while($card = mysqli_fetch_assoc($result)) {
-                $id = $card['id'];
-                $title = $card['title'];
-                $definition = $card['definition'];
-                $date = $card['date'];
-    ?>
     
     <div class="container text-left">
       <div class="row">
+
         <?php
-          echo ' <div class="col-sm">
+        $sql = "SELECT * FROM `definition`";
+        $result = mysqli_query($con, $sql);
+
+        if($result) {
+          while($card = mysqli_fetch_assoc($result)) {
+            $id = $card['id'];
+            $title = $card['title'];
+            $definition = $card['definition'];
+            $date = $card['date'];
+            echo ' <div class="col">
             <div class="card">
                 <div class="card-body">
                   <h2 class="card-title">'.$title.'</h2>
                   <p class="card-text">'.$definition.'</p>
-                  <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> on '.$date.'</small></p>
+                  <p class="card-text"><small class="text-muted">Posted by <strong>Panda</strong> '.$date.'</small></p>
               </div>
             </div>
           </div> ';
           }
         }
         ?>
+      
+
       </div>
     </div>
 
